@@ -1,0 +1,703 @@
+/* Global Styles */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #060a1e;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.top-banner {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.separateur-banner {
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 0; 
+}
+
+/* Header Styles */
+
+header {
+    background-color: #060a1e; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    position: relative;
+}
+
+.logo {
+    position: relative; /* Pas de position absolue */
+    margin: 0 auto; /* Centre horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Espacement sous le logo */
+}
+
+.logo img {
+    height: 100px;
+    display: block;
+}
+
+nav.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Espace entre logo et liens */
+    padding: 30px 0px;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0 ;
+    padding: 0;
+    justify-content: center;
+    flex: 1;
+    margin-top: -25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff; /* Liens en blanc */
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+    color: #007bff; /* Couleur bleue pour le lien actif */
+    font-weight: bold;
+}
+
+/* Effet de soulignement au survol */
+.nav-links li a::after {
+    content: ""; /* Contenu vide pour créer la ligne */
+    position: absolute;
+    bottom: 0; /* Ligne en bas du lien */
+    left: 0;
+    width: 100%; /* La ligne couvre tout le lien */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: #007bff; /* Couleur de la ligne bleue */
+    transform: scaleX(0); /* Ligne invisible au départ */
+    transform-origin: left; /* Animation partant de la gauche */
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+
+/* Apparition du soulignement au survol */
+.nav-links li a:hover::after {
+    transform: scaleX(1); /* La ligne apparaît pleinement */
+}
+
+.nav-links li a:hover {
+    color: #007bff; /* Couleur bleue au survol */
+}
+
+.nav-links .active {
+    color: #007bff; /* Accent bleu pour le lien actif */
+    font-weight: bold;
+}
+
+.nav-links .active::after {
+    color: #007bff; /* Accent bleu pour le lien actif */
+    font-weight: bold;
+}
+
+.separateur-nav {
+    border: none;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 0; 
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    background-color: #060a1e;
+}
+
+.hero-content {
+    max-width: 50%;
+    text-align: center;
+    color: #fff;
+    margin-left: 400px;
+}
+
+.hero-content h1 {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.hero-image img {
+    max-width: 100%;
+    width: 1000px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Divider */
+.divider {
+    width: 70%;
+    height: 10px;
+    background-color: #fff;
+    margin: 40px auto;
+}
+
+/* Why Section */
+.why-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #060a1e; /* Fond noir */
+}
+
+.why-section h2 {
+    font-size: 2.5rem;
+    color: #007bff; /* Couleur bleue */
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.why-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Largeur maximale */
+}
+
+.why-card {
+    background-color: transparent; /* Fond transparent */
+    color: #fff; /* Texte blanc */
+    flex: 1; /* Même taille pour chaque carte */
+    text-align: center;
+    padding: 0 20px;
+}
+
+.why-card h3 {
+    font-size: 1.8rem;
+    color: #fff; /* Couleur blanche */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.why-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc; /* Texte gris clair */
+    margin: 0;
+}
+
+/* Divider */
+.divider {
+    width: 70%;
+    height: 10px;
+    background-color: #fff;
+    margin: 40px auto;
+}
+
+/* Portofolio */
+
+.portfolio-section {
+    padding: 50px 20px;
+    background-color: #060a1e;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: none; /* Supprime la bordure bleue */
+    transition: none; /* Supprime l'animation */
+}
+
+.portfolio-item img:hover {
+    transform: none; /* Désactive l'effet de zoom */
+}
+
+/* Instagram */
+
+.instagram-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.instagram-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.instagram-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Divider */
+.divider {
+    width: 70%;
+    height: 10px;
+    background-color: #fff;
+    margin: 40px auto;
+}
+
+/* Fonctionnement */
+
+h2 {
+    text-align: center; /* Centre le texte */
+    font-size: 2.2rem !important; /* Change la taille du texte et force la règle */
+    line-height: 1.2 !important; /* Ajuste l'espacement vertical */
+    white-space: normal; /* Évite les coupures */
+    overflow-wrap: normal; /* Empêche la coupure des mots */
+    word-wrap: normal;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.process-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #060a1e;
+}
+
+.process-section h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    background-color: transparent;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+}
+
+.step h3 {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.step h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Divider */
+.divider {
+    width: 70%;
+    height: 10px;
+    background-color: #fff;
+    margin: 40px auto;
+}
+
+/* Actions */
+
+.action-section {
+    background-color: #060a1e;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.action-section h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.action-section p, .action-section ul {
+    text-align: center; /* Centre le texte */
+    margin: 0 auto; /* Ajuste l'espace */
+    max-width: 800px; /* Fixe une largeur maximale pour ne pas que ça s'étale trop */
+}
+
+.action-section p {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.action-section ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: left; /* Aligne tout le contenu du formulaire à gauche */
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px; /* Ajoute un espace entre la question et la réponse */
+    font-weight: bold; /* Optionnel : pour mettre en évidence la question */
+}
+
+/* Style commun pour tous les champs de saisie */
+form input,
+form textarea {
+    width: 100%;
+    max-width: 500px; /* Définit une largeur maximale cohérente */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+}
+
+/* Champ spécifique pour "Votre budget" (optionnel, si nécessaire) */
+#budget {
+    width: 90%; /* Assure qu'il respecte la largeur du conteneur */
+    max-width: 600px; /* Aligné avec les autres champs */
+}
+
+form button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #003d80;
+}
+
+
+form div {
+    display: flex;
+    align-items: flex-start; /* Aligne les enfants au début */
+    justify-content: flex-start; /* Aligne les réponses à gauche */
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+}
+
+form div label {
+    margin-bottom: 5px;
+}
+
+form textarea, form input {
+    width: 100%; /* Prend toute la largeur */
+    max-width: 600px; /* Fixe une largeur maximale */
+}
+
+
+form div input[type="radio"] + label,
+form div input[type="checkbox"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; /* Espace entre l'input et le texte */
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column; /* Organise verticalement */
+    gap: 10px; /* Espace entre les boutons */
+}
+
+.radio-group label {
+    white-space: nowrap; /* Empêche les retours à la ligne et réduit les espaces superflus */
+}
+
+.radio-item {
+    display: flex; /* Place les boutons radio et le texte sur une seule ligne */
+    align-items: center; /* Aligne verticalement le cercle et le texte */
+    gap: 10px; /* Espace entre le cercle et le texte */
+}
+
+.radio-item input[type="radio"] {
+    margin: 0; /* Supprime les marges par défaut */
+    width: 16px; /* Taille des boutons radio */
+    height: 16px;
+}
+
+.radio-item label {
+    max-width: calc(100% - 30px); /* Adapte la largeur pour les boutons radio */
+    overflow-wrap: break-word; /* Coupe les textes trop longs */
+    white-space: normal;
+}
+
+input,
+textarea {
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 100%; /* Empêche tout dépassement */
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur */
+}
+
+.refroidissement-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.refroidissement-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.refroidissement-item input[type="radio"] {
+    margin: 0; /* Supprime les marges par défaut */
+    width: 16px; /* Taille des boutons radio */
+    height: 16px;
+}
+
+.refroidissement-item label {
+    font-size: 1rem; /* Ajuste la taille du texte */
+    color: #fff; /* Assure que le texte est lisible */
+    line-height: 1.2; /* Ajuste l'espacement vertical */
+}
+
+.logo-footer-container {
+    position: relative;
+    top: 120%; /* Ajustez cette valeur pour le positionner juste en dessous */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.logo-footer-container img {
+    width: 80px; /* Ajustez la taille du logo */
+    height: auto;
+}
+
+#scroll-to-top {
+    position: fixed; /* Fixé en bas à droite de l'écran */
+    bottom: 20px; /* Distance du bas de l'écran */
+    right: 20px; /* Distance du bord droit de l'écran */
+    background-color: #007bff; /* Couleur bleue */
+    color: #fff; /* Couleur blanche pour la flèche */
+    width: 50px; /* Taille du bouton */
+    height: 50px; /* Taille du bouton */
+    display: flex; /* Centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    border-radius: 50%; /* Rond */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre */
+    cursor: pointer; /* Curseur de clic */
+    font-size: 24px; /* Taille de la flèche */
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
+    opacity: 0; /* Invisible au départ */
+    transition: opacity 0.3s ease; /* Apparition fluide */
+}
+
+#scroll-to-top:hover {
+    background-color: #0056b3; /* Couleur bleue plus foncée au survol */
+}
+
+#scroll-to-top.show {
+    opacity: 1; /* Visible quand l'utilisateur défile */
+}
+
+
+
+/* Styles pour les écrans inférieurs à 768px */
+@media (max-width: 768px) {
+    body { 
+        font-size: 14px; /*Réduit la taille du texte*/
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column; /*Change la disposition du header*/
+        text-align: center;
+    }
+
+    .logo {
+        position: relative !important; /* Le positionne dans le flux naturel */
+        margin: 20px auto !important; /* Centre le logo horizontalement */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: auto !important; /* Supprime toute hauteur fixe */
+        margin-bottom: 5px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Empile les liens */
+        gap: 15px; /* Ajoute un espace entre les liens */
+        margin-top: -40px; /* Ajoute de l'espace au-dessus des liens */
+    }
+
+    .hero-section {
+        flex-direction: column; /*Place le texte au-dessus ou en dessous de l'image*/
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        max-width: 100%; /*Prend toute la largeur*/
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /*Texte plus petit pour s'adapter*/
+    }
+
+    .cta-button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .hero-image img {
+        width: 100%; /*Réduit l'image au maximum*/
+        height: auto;
+    }
+
+    .why-cards {
+        flex-direction: column; /*Place les cartes en colonne*/
+        gap: 20px; /*Ajoute un espace entre les cartes*/
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /*Plus de colonnes étroites*/
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr; /*Affiche une colonne unique*/
+    }
+
+    .step {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    form {
+        max-width: 95%; /* Réduit légèrement la largeur pour mobile */
+        padding: 15px; /* Ajoute un peu d'espace intérieur */
+        margin: 0 auto; /* Centre le formulaire */
+        text-align: left; /* Garde le texte aligné à gauche */
+    }
+
+    .radio-group {
+        gap: 5px; /* Réduit l'espacement entre les options pour s'adapter */
+        align-items: flex-start; /* Aligne les options à gauche */
+    }
+
+    form label {
+        font-size: 1rem; /* Adapte la taille du texte */
+        line-height: 1.4; /* Améliore la lisibilité */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%; /* Prend toute la largeur du formulaire */
+        max-width: 100%; /* Empêche tout dépassement horizontal */
+        margin-bottom: 10px; /* Ajoute un espace entre les champs */
+    }
+
+    .form-group {
+        flex-direction: column; /*Aligne les champs en colonne */
+        gap: 10px;
+    }
+}

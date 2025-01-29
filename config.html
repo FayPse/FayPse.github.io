@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquiris</title>
+    
+    <link rel="stylesheet" href="config.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-banner">
+            <span>🎉 Bonne année 2025 de la part d'Aquiris - 5% avec le code AQUIRIS2025 !</span>
+        </div>
+
+        <div class="separateur-banner"></div>
+
+        <div class="logo">
+            <img src="Logo-remove.png" alt="Logo">
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="config.html">Configurer votre pc </a></li>
+                <li><a href="#">Nos Avis clients</a></li>
+                <li><a href="https://www.instagram.com/aquirispc" target="_blank">Nous contacter</a></li>
+            </ul>  
+        </nav>
+    </header>
+
+    <div class="separateur-nav"></div>
+
+    <section id="action" class="action-section">
+        <h2>CONFIGUREZ VOTRE PC !</h2>
+        <p>
+            Le formulaire ci-dessous est destiné aux personnes qui recherchent un service de création/montage/réparation de PC sur mesure. En le remplissant, je pourrais cerner plus facilement vos besoins.
+        </p>
+        <ul>
+            <li>Ne remplissez pas ce formulaire si l'achat de votre PC n'est pas prévu pour maintenant !</li>
+            <li>Mon service est valable uniquement si vous habitez en France métropolitaine</li>
+            <li>Je ne fais pas de watercooling custom</li>
+        </ul>
+    
+        <form action="process_form.php" method="POST">
+            <div>
+                <label>Dans combien de temps comptez-vous acheter ce PC ? *</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="immediate" name="timeline" value="Au plus vite, j'ai déjà l'argent et je suis prêt à commander">
+                        <label for="immediate">Au plus vite, j'ai déjà l'argent et je suis prêt à commander</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="later" name="timeline" value="Si ce n'est pas pour maintenant...">
+                        <label for="later">Si ce n'est pas pour maintenant...</label>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <label for="budget">Quel est votre budget approximatif ? *</label>
+            <input type="text" id="budget" name="budget" placeholder="Votre budget" required>
+    
+            <div>
+                <label for="service">De quelle prestation avez-vous besoin ? *</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="service1" name="service" value="creation-assemblage" required>
+                        <label for="service1">Création et assemblage d'un PC sur mesure (à partir de 100€)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="service2" name="service" value="assemblage-seulement">
+                        <label for="service2">Assemblage seulement</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="service3" name="service" value="configuration-optimisation">
+                        <label for="service3">Configuration et optimisation</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                        <label for="name">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom" required>
+
+                        <label for="name">Pays</label>
+                        <input type="text" id="pays" name="pays" placeholder="Votre pays" required>
+                    
+                        <label for="email">Adresse e-mail*</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+                        <label for="name">Quel type d'écran allez-vous utiliser ?</label>
+                        <input type="text" id="ecran" name="ecran" placeholder="144hz, 200hz, 1080p etc..." required>
+
+                        <label for="name">Quel sera l'utilisation de ce pc ?</label>
+                        <input type="text" id="utilisation" name="utilisation" placeholder="Montage video, gaming, streaming etc..." required>
+
+                        <label for="name">Vos critères esthétiques</label>
+                        <input type="text" id="esthetiques" name="esthetiques" placeholder="Montage video, gaming, streaming etc..." required>
+
+                    </div>
+                </div>
+
+                <label>Type de refroidissement :</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="watercooling" name="refroidissement" value="Water Cooling" required>
+                        <label for="watercooling">Watercooling</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="ventirad" name="refroidissement" value="Ventirad">
+                        <label for="ventirad">Ventirad</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Boitier en particulier ?</label>
+                        <input type="text" id="boitier" name="boitier" placeholder="Le nom du boitier" required>
+
+                        <label for="name">Si vous avez d'autres requetes n'hesitez pas !</label>
+                        <input type="text" id="requetes" name="requetes" placeholder="Vos requêtes !" required>
+                    </div>
+                </div>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    </main>
+
+    <!-- Bouton pour remonter en haut -->
+    <div id="scroll-to-top" onclick="scrollToTop()">
+        ▲
+    </div>
+
+    <script>
+        // Affiche ou cache le bouton en fonction du défilement
+        window.addEventListener("scroll", () => {
+            const scrollButton = document.getElementById("scroll-to-top");
+            if (window.scrollY > 300) { // Affiche si l'utilisateur a défilé de 300px
+                scrollButton.classList.add("show");
+            } else {
+                scrollButton.classList.remove("show");
+            }
+        });
+    
+        // Fonction pour remonter en haut
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" // Défilement fluide
+            });
+        }
+    </script>
+    
+
+    <footer>
+        <div class="logo-footer-container">
+            <img src="Logo-remove.png" alt="Logo Aquiris">
+            </div>
+    </footer>
+
+</body>
+</html>
